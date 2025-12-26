@@ -4,18 +4,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pexek | Crafting Digital Experiences for Bold Startups</title>
+    
+    <!-- SEO Primary Metadata -->
+    <title>Pexek | Premium Digital Agency in Morocco - Web & Design Excellence</title>
+    <meta name="description" content="Pexek is a leading digital agency in Morocco specializing in high-performance web development, UI/UX design, and strategic digital growth for visionary brands." />
+    <meta name="keywords" content="digital agency morocco, web development morocco, UI/UX design Casablanca, Pexek, software engineering, digital strategy, SEO Morocco" />
+    <meta name="author" content="Pexek" />
+    <link rel="canonical" href="https://pexek.com/" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pexek.com/" />
+    <meta property="og:title" content="Pexek | Crafting World-Class Digital Experiences" />
+    <meta property="og:description" content="Based in Morocco, Pexek engineers high-performance web solutions and strategic designs to help ambitious businesses dominate." />
+    <meta property="og:image" content="https://i.ibb.co/tMdCZpBx/photo-5940593172792675097-y-1.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://pexek.com/" />
+    <meta property="twitter:title" content="Pexek | Premium Digital Agency Morocco" />
+    <meta property="twitter:description" content="Transform your brand with Pexek's precision engineering and transformative design services." />
+    <meta property="twitter:image" content="https://i.ibb.co/tMdCZpBx/photo-5940593172792675097-y-1.jpg" />
+
+    <!-- Structured Data: JSON-LD for Digital Agency -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Pexek",
+      "image": "https://i.ibb.co/tMdCZpBx/photo-5940593172792675097-y-1.jpg",
+      "@id": "https://pexek.com",
+      "url": "https://pexek.com",
+      "telephone": "",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "Casablanca",
+        "addressCountry": "MA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 33.5731,
+        "longitude": -7.5898
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/salah-eddine-el-qaous-2b131b140"
+      ]
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
     <style>
-      :root {
-        scroll-padding-top: 6rem;
-      }
-      * {
-        cursor: none !important; /* Force custom cursor */
-      }
+      :root { scroll-padding-top: 6rem; }
+      * { cursor: none !important; }
       body {
         font-family: 'Inter', sans-serif;
         background-color: #0f172a;
@@ -23,35 +79,25 @@
         position: relative;
         overflow-x: hidden;
       }
-      /* Technical Grid Background */
       body::before {
         content: "";
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: 
-          radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.03) 1px, transparent 0);
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-image: radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.03) 1px, transparent 0);
         background-size: 40px 40px;
         z-index: -2;
       }
-      /* Depth Glow */
       body::after {
         content: "";
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
         background: radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0) 0%, rgba(15, 23, 42, 1) 100%);
         pointer-events: none;
         z-index: -1;
       }
-      
-      .font-display {
-        font-family: 'Montserrat', sans-serif;
-      }
+      .font-display { font-family: 'Montserrat', sans-serif; }
       .glass {
         background: rgba(15, 23, 42, 0.85);
         backdrop-filter: blur(16px);
@@ -63,8 +109,6 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
-      
-      /* Reveal on Scroll Animations */
       .reveal {
         opacity: 0;
         transform: translateY(30px);
@@ -74,80 +118,31 @@
         opacity: 1;
         transform: translateY(0);
       }
-
-      /* Tech Marquee Animation */
-      @keyframes marquee {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-50%); }
-      }
-      .animate-marquee {
-        display: flex;
-        width: max-content;
-        animation: marquee 30s linear infinite;
-      }
-      .animate-marquee:hover {
-        animation-play-state: paused;
-      }
-
-      /* Floating Animation */
-      @keyframes float {
-        0% { transform: translateY(0px) rotate(0deg); }
-        50% { transform: translateY(-20px) rotate(5deg); }
-        100% { transform: translateY(0px) rotate(0deg); }
-      }
-      .animate-float {
-        animation: float 6s ease-in-out infinite;
-      }
-
+      @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+      .animate-marquee { display: flex; width: max-content; animation: marquee 30s linear infinite; }
+      .animate-marquee:hover { animation-play-state: paused; }
+      @keyframes float { 0% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(5deg); } 100% { transform: translateY(0px) rotate(0deg); } }
+      .animate-float { animation: float 6s ease-in-out infinite; }
       .scrollbar-hide::-webkit-scrollbar { display: none; }
       .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-
-      /* Custom Cursor styles */
-      #cursor {
-        position: fixed;
-        width: 10px;
-        height: 10px;
-        background: #3b82f6;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        transition: transform 0.1s ease-out;
-      }
-      #cursor-follower {
-        position: fixed;
-        width: 40px;
-        height: 40px;
-        border: 2px solid rgba(59, 130, 246, 0.5);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9998;
-        transition: transform 0.15s ease-out, width 0.3s, height 0.3s, background 0.3s;
-      }
-      .cursor-hover #cursor-follower {
-        width: 60px;
-        height: 60px;
-        background: rgba(59, 130, 246, 0.1);
-        border-color: rgba(59, 130, 246, 1);
-      }
-
-      @media (max-width: 768px) {
-        * { cursor: auto !important; }
-        #cursor, #cursor-follower { display: none; }
-      }
+      #cursor { position: fixed; width: 10px; height: 10px; background: #00F2FF; border-radius: 50%; pointer-events: none; z-index: 9999; transition: transform 0.1s ease-out; }
+      #cursor-follower { position: fixed; width: 40px; height: 40px; border: 2px solid rgba(0, 242, 255, 0.5); border-radius: 50%; pointer-events: none; z-index: 9998; transition: transform 0.15s ease-out, width 0.3s, height 0.3s, background 0.3s; }
+      .cursor-hover #cursor-follower { width: 60px; height: 60px; background: rgba(0, 242, 255, 0.1); border-color: rgba(0, 242, 255, 1); }
+      @media (max-width: 768px) { * { cursor: auto !important; } #cursor, #cursor-follower { display: none; } }
     </style>
 
-<link rel="stylesheet" href="/index.css">
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
-  }
-}
-</script>
-  <script type="module" crossorigin src="/assets/index-BRVzP9rG.js"></script>
+  <link rel="stylesheet" href="/index.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.3/",
+        "react": "https://esm.sh/react@^19.2.3",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+        "@google/genai": "https://esm.sh/@google/genai@^1.34.0"
+      }
+    }
+    </script>
+  <script type="module" crossorigin src="/assets/index-BEN6pY9O.js"></script>
 </head>
   <body>
     <div id="root"></div>
