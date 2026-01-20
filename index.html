@@ -26,6 +26,8 @@
         --accent-secondary: #3b82f6;
       }
       * { cursor: none !important; }
+      @media (max-width: 768px) { * { cursor: auto !important; } }
+
       body {
         font-family: 'Plus Jakarta Sans', sans-serif;
         background-color: #020617;
@@ -33,6 +35,14 @@
         position: relative;
         overflow-x: hidden;
       }
+      
+      /* Accessibility: Focus visible styling */
+      :focus-visible {
+        outline: 2px solid #22d3ee !important;
+        outline-offset: 4px !important;
+        box-shadow: 0 0 15px rgba(34, 211, 238, 0.5) !important;
+      }
+
       body::before {
         content: "";
         position: fixed;
@@ -95,7 +105,6 @@
 
       /* Mobile Specific Overrides */
       @media (max-width: 768px) { 
-        * { cursor: auto !important; } 
         #cursor, #cursor-follower { display: none; } 
         .container { padding-left: 20px !important; padding-right: 20px !important; }
         p { font-size: 1.1rem !important; line-height: 1.6 !important; color: #d1d5db !important; }
@@ -114,7 +123,7 @@
       }
     }
     </script>
-  <script type="module" crossorigin src="/assets/index-B2OgKzEP.js"></script>
+  <script type="module" crossorigin src="/assets/index-CgdA4iHC.js"></script>
 </head>
   <body>
     <div id="root"></div>
