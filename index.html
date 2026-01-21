@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
@@ -25,9 +24,6 @@
         --accent: #22d3ee;
         --accent-secondary: #3b82f6;
       }
-      * { cursor: none !important; }
-      @media (max-width: 768px) { * { cursor: auto !important; } }
-
       body {
         font-family: 'Plus Jakarta Sans', sans-serif;
         background-color: #020617;
@@ -35,14 +31,6 @@
         position: relative;
         overflow-x: hidden;
       }
-      
-      /* Accessibility: Focus visible styling */
-      :focus-visible {
-        outline: 2px solid #22d3ee !important;
-        outline-offset: 4px !important;
-        box-shadow: 0 0 15px rgba(34, 211, 238, 0.5) !important;
-      }
-
       body::before {
         content: "";
         position: fixed;
@@ -92,20 +80,9 @@
       
       .scrollbar-hide::-webkit-scrollbar { display: none; }
       .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
-      
-      #cursor { position: fixed; width: 8px; height: 8px; background: #22d3ee; border-radius: 50%; pointer-events: none; z-index: 9999; transition: transform 0.05s linear; box-shadow: 0 0 15px #22d3ee; }
-      #cursor-follower { 
-        position: fixed; width: 40px; height: 40px; 
-        border: 1px solid rgba(34, 211, 238, 0.4); 
-        border-radius: 50%; pointer-events: none; z-index: 9998; 
-        transition: transform 0.15s cubic-bezier(0.23, 1, 0.32, 1);
-        background: radial-gradient(circle at center, rgba(34, 211, 238, 0.08) 0%, transparent 70%);
-      }
-      .cursor-hover #cursor-follower { width: 70px; height: 70px; background: rgba(34, 211, 238, 0.1); border-color: #22d3ee; border-width: 1.5px; }
 
       /* Mobile Specific Overrides */
       @media (max-width: 768px) { 
-        #cursor, #cursor-follower { display: none; } 
         .container { padding-left: 20px !important; padding-right: 20px !important; }
         p { font-size: 1.1rem !important; line-height: 1.6 !important; color: #d1d5db !important; }
       }
@@ -123,7 +100,7 @@
       }
     }
     </script>
-  <script type="module" crossorigin src="/assets/index-CgdA4iHC.js"></script>
+  <script type="module" crossorigin src="/assets/index-BE-vS_DE.js"></script>
 </head>
   <body>
     <div id="root"></div>
